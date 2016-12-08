@@ -29,6 +29,7 @@ export default {
 
   navPrev: PropTypes.node,
   navNext: PropTypes.node,
+  dayLabel: PropTypes.element,
 
   // portal options
   withPortal: PropTypes.bool,

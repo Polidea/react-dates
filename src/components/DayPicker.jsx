@@ -31,6 +31,7 @@ const propTypes = {
 
   navPrev: PropTypes.node,
   navNext: PropTypes.node,
+  dayLabel: PropTypes.element,
 
   onDayClick: PropTypes.func,
   onDayMouseDown: PropTypes.func,
@@ -60,6 +61,7 @@ const defaultProps = {
 
   navPrev: null,
   navNext: null,
+  dayLabel: null,
 
   onDayClick() {},
   onDayMouseDown() {},
@@ -356,6 +358,7 @@ export default class DayPicker extends React.Component {
       orientation,
       modifiers,
       withPortal,
+      dayLabel,
       onDayClick,
       onDayMouseDown,
       onDayMouseUp,
@@ -440,6 +443,7 @@ export default class DayPicker extends React.Component {
               orientation={orientation}
               withPortal={withPortal}
               numberOfMonths={numberOfMonths}
+              dayLabel={dayLabel}
               onDayClick={onDayClick}
               onDayMouseDown={onDayMouseDown}
               onDayMouseUp={onDayMouseUp}

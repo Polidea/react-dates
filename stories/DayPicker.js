@@ -27,6 +27,23 @@ const TestNextIcon = props => (
   </span>
 );
 
+const CustomCalendarDay = props => (
+  <div style={{
+    display: 'flex',
+    flexDirection: 'column',
+    userSelect: 'none',
+    // border: '1px solid #dce0e0',
+    // backgroundColor: '#fff',
+    // color: '#484848',
+    // padding: '3px'
+    }}
+  >
+    <span>{props.day.format('D')}</span>
+    <span>340$</span>
+  </div>
+);
+
+
 storiesOf('DayPicker', module)
   .addWithInfo('default', () => (
     <DayPicker />
@@ -53,4 +70,9 @@ storiesOf('DayPicker', module)
         orientation={VERTICAL_ORIENTATION}
       />
     </div>
+  ))
+  .addWithInfo('custom calendar day', () => (
+    <DayPicker
+      dayLabel={CustomCalendarDay}
+    />
   ));

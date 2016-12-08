@@ -22,6 +22,7 @@ const propTypes = {
   numberOfMonths: PropTypes.number,
   modifiers: PropTypes.object,
   orientation: OrientationShape,
+  dayLabel: PropTypes.element,
   onDayClick: PropTypes.func,
   onDayMouseDown: PropTypes.func,
   onDayMouseUp: PropTypes.func,
@@ -45,6 +46,7 @@ const defaultProps = {
   numberOfMonths: 1,
   modifiers: {},
   orientation: HORIZONTAL_ORIENTATION,
+  dayLabel: null,
   onDayClick() {},
   onDayMouseDown() {},
   onDayMouseUp() {},
@@ -105,6 +107,7 @@ export default class CalendarMonthGrid extends React.Component {
       numberOfMonths,
       monthFormat,
       orientation,
+      dayLabel,
       transformValue,
       onDayMouseEnter,
       onDayMouseLeave,
@@ -133,6 +136,7 @@ export default class CalendarMonthGrid extends React.Component {
           modifiers={modifiers}
           monthFormat={monthFormat}
           orientation={orientation}
+          dayLabel={dayLabel}
           onDayMouseEnter={onDayMouseEnter}
           onDayMouseLeave={onDayMouseLeave}
           onDayMouseDown={onDayMouseDown}

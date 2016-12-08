@@ -38,6 +38,7 @@ const defaultProps = {
 
   navPrev: null,
   navNext: null,
+  dayLabel: null,
 
   onDateChange() {},
   onFocusChange() {},
@@ -244,6 +245,7 @@ export default class SingleDatePicker extends React.Component {
       monthFormat,
       navPrev,
       navNext,
+      dayLabel,
       onPrevMonthClick,
       onNextMonthClick,
       withPortal,
@@ -275,6 +277,7 @@ export default class SingleDatePicker extends React.Component {
           enableOutsideDays={enableOutsideDays}
           modifiers={modifiers}
           numberOfMonths={numberOfMonths}
+          dayLabel={dayLabel}
           onDayMouseEnter={this.onDayMouseEnter}
           onDayMouseLeave={this.onDayMouseLeave}
           onDayMouseDown={this.onDayClick}
